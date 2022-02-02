@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Open Sans', sans-serif -->
+
+    <title>Frontend Mentor | QR code component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      :root {
+        --white: hsl(0, 0%, 100%);
+        --lightGray: hsl(212, 45%, 89%);
+        --grayIshBlue: hsl(220, 15%, 55%);
+        --darkBlue: hsl(218, 44%, 22%);
+      }
+
+      body {
+        background-color: var(--lightGray);
+        max-width: 1920px;
+      }
+
+      .attribution {
+        position: fixed;
+        top: 98%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .qrcode {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-grow: 0;
+        height: 57vh;
+        width: 20vw;
+        border-radius: 30px;
+        background-color: var(--white);
+        font-size: 15px;
+      }
+
+      .qrimage {
+        height: 18vw;
+        width: 18vw;
+      }
+
+      .firstTxt {
+        margin: 0 3vh;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--darkBlue);
+      }
+
+      .secondTxt {
+        margin: 0 3vh;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: var(--grayIshBlue);
+      }
+
+      @media ((max-width: 1600px) and (orientation: landscape)) {
+        .qrcode {
+          width: 30vw;
+        }
+
+        .qrimage {
+          width: 27vw;
+          height: 27vw;
+        }
+
+        .firstTxt {
+          font-size: 1.3rem;
+        }
+
+        .secondTxt {
+          font-size: 1rem;
+        }
+      }
+
+      @media ((max-width: 1300px) and (orientation: landscape)) {
+        .qrcode {
+          height: 70vh;
+        }
+
+        .qrimage {
+          width: 24vw;
+          height: 24vw;
+        }
+
+        .attribution {
+          top: 94%;
+        }
+      }
+
+      @media (max-width: 950px) {
+        .qrcode {
+          width: 90vw;
+          height: 80vh;
+        }
+
+        .qrimage {
+          width: 83vw;
+          height: 83vw;
+        }
+
+        .firstTxt {
+          font-size: 1.5rem;
+        }
+
+        .secondTxt {
+          font-size: 1.3rem;
+        }
+
+        .attribution {
+          top: 95%;
+          text-align: center;
+        }
+
+        @media (max-width: 400px) {
+          .qrcode {
+            width: 90vw;
+            height: 80vh;
+          }
+
+          .qrimage {
+            width: 83vw;
+            height: 83vw;
+          }
+
+          .firstTxt {
+            font-size: 1.3rem;
+          }
+
+          .secondTxt {
+            font-size: 1rem;
+          }
+          .attribution {
+            top: 95%;
+            text-align: center;
+          }
+
+          @media (max-width: 350px) {
+            .qrcode {
+              height: 85vh;
+            }
+
+            .qrimage {
+              width: 75vw;
+              height: 75vw;
+            }
+          }
+          .attribution {
+            top: 93%;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="qrcode">
+      <img class="qrimage" src="./images/image-qr-code.png" alt="qr code" />
+      <span class="firstTxt">
+        Improve your front-end skills by building projects</span
+      >
+      <span class="secondTxt">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level</span
+      >
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alan</a>.
+    </div>
+  </body>
+</html>
